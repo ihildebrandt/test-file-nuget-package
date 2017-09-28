@@ -8,6 +8,6 @@
         <authors>PIHI Media, Inc.</authors>
     </metadata>
     <files>
-        <file src="test.zip"></file>
+        <file src="test.zip" target="content"></file>
     </files>
 </package>
