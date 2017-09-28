@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>TestFileNuGetPackage</id>
+        <title>Test File NuGet Package</title>
+        <version>1.0</version>
+        <description>Test File NuGet Package</description>
+        <authors>PIHI Media, Inc.</authors>
+    </metadata>
+    <files>
+        <file src="test.zip"></file>
+    </files>
+</package>
