@@ -3,7 +3,7 @@
     <metadata>
         <id>TestFileNuGetPackage</id>
         <title>Test File NuGet Package</title>
-        <version>1.0</version>
+        <version>$version$</version>
         <description>Test File NuGet Package</description>
         <authors>PIHI Media, Inc.</authors>
     </metadata>
