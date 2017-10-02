@@ -10,7 +10,7 @@ $sourcePath = "$installPath\deploy"
 Get-ChildItem -Path $sourcePath -Filter "*.zip" | 
     ForEach-Object {
         $fullName = $_.FullName
-        $name = [System.IO.Path].GetFileNameWithoutExtension($_.FullName)
+        $name = $_.BaseName
 
         Expand-Archive -Path $fullName -DestinationPath "$sourcePath\$name"
     }
