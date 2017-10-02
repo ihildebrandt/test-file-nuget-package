@@ -7,7 +7,7 @@ param(
 $rootPath = (Get-Item $installPath).Parent.Parent.FullName
 $sourcePath = "$installPath\deploy"
 
-Get-Content -Path $sourcePath -Filter "*.zip" | 
+Get-ChildItem -Path $sourcePath -Filter "*.zip" | 
     ForEach-Object {
         $fullName = $_.FullName
         $name = [System.IO.Path].GetFileNameWithoutExtension($_.FullName)
