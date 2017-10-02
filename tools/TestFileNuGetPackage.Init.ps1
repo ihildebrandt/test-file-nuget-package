@@ -1,10 +1,16 @@
-param($installPath, $toolsPath, $package)
+param(
+    $installPath, 
+    $toolsPath, 
+    $package, 
+    $project)
 
 $rootPath = (Get-Item $installPath).Parent.Parent.FullName
 $sourcePath = "$installPath\deploy"
-$targetPath = "$rootPath\"
 
-Write-Host "InstallPath: $installPath"
-Write-Host "ToolsPath: $toolsPath"
-Write-Host "SourcePath: $sourcePath" 
-Write-Host "TargetPath: $targetPath"
+Get-Content -Path $sourcePath -Filter "*.zip" | 
+    ForEach-Object {
+        $fullName = $_.FullName
+        $name = [System.IO.Path].GetFileNameWithoutExtension($_.FullName)
+
+        Expand-Archive -Path $fullName -DestinationPath "$sourcePath\$name"
+    }
