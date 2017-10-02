@@ -8,7 +8,7 @@
         <authors>PIHI Media, Inc.</authors>
     </metadata>
     <files>
-        <file src="tools\TestFileNuGetPackage.Init.ps1" target="tools\init.ps1">
-        <file src="test.zip" target="deploy\test.zip"></file>
+        <file src="tools\TestFileNuGetPackage.Init.ps1" target="tools\init.ps1" />
+        <file src="test.zip" target="deploy\test.zip" />
     </files>
 </package>
